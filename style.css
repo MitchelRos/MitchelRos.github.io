@@ -1,0 +1,404 @@
+@keyframes bala {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* Animación de salto */
+@keyframes salto {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: rgb(221, 182, 124);
+    background-image: url(SRC/IMG/Room.jpg);
+    background-size: cover;
+}
+
+.hidden
+{
+    display: none !important;
+}
+
+#sala {
+    position: fixed;
+    /* Para que quede fijado en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6);*/
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    /* Aseguramos que esté al frente */
+}
+
+#sala img {
+    width: 13vw;
+}
+
+#sala div {
+    position: absolute;
+}
+
+#cum {
+    bottom: -10vh;
+    /* 10% de la altura de la pantalla desde el fondo */
+    z-index: 500;
+    animation: salto 0.5s forwards;
+}
+
+#cum img {
+    width: 40vw;
+}
+
+#mesa {
+    top: 57vh;
+    z-index: 2;
+}
+
+#mesa img {
+    width: 25vw;
+}
+
+#inv0 {
+    top: 60vh;
+    left: 24vw;
+    z-index: 2;
+    animation: salto 1.4s forwards infinite;
+}
+
+#inv1 {
+    top: 70vh;
+    left: 80vw;
+    z-index: 2;
+    animation: salto 2.5s forwards infinite;
+}
+
+#inv1 img {
+    width: 18vw;
+}
+
+#inv2 {
+    top: 46vh;
+    left: 13vw;
+    animation: bala 3s ease-in-out infinite;
+
+}
+
+#inv3 {
+    top: 43vh;
+    left: 72vw;
+    animation: bala 1s step-end infinite;
+}
+
+#inv4 {
+    top: 55vh;
+    left: 63vw;
+    z-index: 10;
+    animation: salto 2s ease-in-out infinite;
+}
+
+#inv5 {
+    top: 40vh;
+    left: 33vw;
+    animation: bala 5s ease-out infinite;
+}
+
+#inv6 {
+    top: 40vh;
+    left: 53vw;
+    z-index: 1;
+    animation: bala 2s ease-in infinite;
+}
+
+#inv7 {
+    top: 43vh;
+    animation: bala 0.3s forwards infinite;
+}
+
+#inv8 {
+    top: 60vh;
+    left: 3vw;
+    animation: salto 1s step-end infinite;
+}
+
+#inv8 img {
+    width: 18vw;
+}
+
+#inv9 {
+    top: 77vh;
+    left: 66vw;
+    z-index: 1;
+    animation: bala 0.2s ease-in-out infinite;
+}
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(138, 126, 190, 1) 24%, rgba(162, 82, 192, 1) 50%, rgba(101, 156, 189, 1) 76%, rgba(45, 253, 171, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#fin, #end1, #end2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(221, 182, 124);
+    background-image: url(SRC/IMG/matrix.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#fin div{
+    position: absolute;
+    z-index: 5;
+}
+#decide img{
+    width: 100vw;
+}
+#silla #pastel{
+    transition: all 2s ease-out;
+    top: 16vh;
+}
+#silla{
+    top: 17vh;
+    left: 60vw;
+}
+#silla img{
+    width: 25vw;
+}
+#pastel{
+    left: 16vw;
+}
+#pastel img{
+    width: 25vw;
+}
+
+#silla:hover{
+    transform: scale(1.5,1.5);
+    transition: all 2s ease-out;
+}
+#pastel:hover{
+transform: scale(1.5,1.5);
+transition: all 2s ease-out;
+}
+
+#overlay video {
+    position: absolute;
+    width: 100%;
+    opacity: 0.6;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+#overlay button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 5px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#overlay button:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+}
+
+#controls>input {
+    display: none;
+}
+
+#controls {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+#controls:hover>input {
+    display: block;
+}
+
+#controls button,
+#controls input {
+    transition: all 1s;
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#controls button {
+    padding: 0;
+    margin: 10px;
+    border: none;
+    background: none;
+}
+
+/* RANGO INPUT */
+input[type=range] {
+    height: 16px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 80%;
+    background: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 1px #50555C;
+    background: #50555C;
+    border-radius: 14px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    border-radius: 10px;
+    background: #529DE1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 1px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #50555C;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 1px #50555C;
+    background: #50555C;
+    border-radius: 14px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    border-radius: 10px;
+    background: #529DE1;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 0px 0px 1px #50555C;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 0px 0px 1px #50555C;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    border-radius: 10px;
+    background: #529DE1;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #50555C;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #50555C;
+}
+
+/* fin rnago */
+
+/* PRIMERA ESCENA */
+
+/* SEGUNDA ESCENA */
+
+/* TERCERA ESCENA */

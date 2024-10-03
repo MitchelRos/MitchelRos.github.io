@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="SRC/IMG/icon.jpg" type="image/x-icon">
+    <script src="cerebelo.js"></script>
+    <title>FELICIDADES PUTO🥱</title>
+</head>
+
+<body>
+    <div id="fin" class="hidden">
+        <div id="decide"><img src="SRC/IMG/decide.png"></div>
+        <div id="silla" onclick="seeend1()"><img src="SRC/IMG/silla.png"></div>
+        <div id="pastel" onclick="seeend2()"><img src="SRC/IMG/pastel.png"></div>
+    </div>
+    <div id="overlay">
+    <video loop autoplay>
+        <source src="SRC/IMG/home.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <button onclick="removeOverlay()">COMENZAR</button>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <div id="sala">
+        <div id="inv0"><img src="SRC/IMG/inv0.png"></div>
+        <div id="inv1"><img src="SRC/IMG/inv1.png"></div>
+        <div id="inv2"><img src="SRC/IMG/inv2.png"></div>
+        <div id="inv3"><img src="SRC/IMG/inv3.png"></div>
+        <div id="inv4"><img src="SRC/IMG/inv4.png"></div>
+        <div id="inv5"><img src="SRC/IMG/inv5.png"></div>
+        <div id="inv6"><img src="SRC/IMG/inv6.png"></div>
+        <div id="inv7"><img src="SRC/IMG/inv7.png"></div>
+        <div id="inv8"><img src="SRC/IMG/inv8.png"></div>
+        <div id="inv9"><img src="SRC/IMG/inv9.png"></div>
+        <div id="mesa" onclick="seefin()"><img src="SRC/IMG/table.png"></div>
+        <div id="cum"><img src="SRC/IMG/cum.png"></div>
+    </div>
+    <!-- Controles de música (parar y volumen) -->
+    <div id="controls">
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" onchange="changeVolume(this.value)">
+        <button id="playPauseBtn" onclick="togglePlayPause()"><img id="music-ctr" src="SRC/IMG/music-off.png"
+                alt="on-music" width="30px"></button>
+    </div>
+
+    <div id="end1" class="hidden"><img src="SRC/IMG/goku.jpg"></div>
+    <div id="end2" class="hidden"><img src="SRC/IMG/gtfo.png"></div>
+    <audio id="myAudio" src="SRC/MSC/mainMusic.mp3" type="audio/mpeg"></audio>
+</body>
+
+</html>
